@@ -1,0 +1,6 @@
+def alphabit1():
+  A = input('Напишите алфавит - ').split()
+  def statistic(self):
+    for i in range(len(seq)):
+      stat = self.seq.count(self.alphabet[i])
+      print(alphabet[i],' - ',stat))
