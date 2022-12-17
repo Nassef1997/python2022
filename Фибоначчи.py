@@ -1,7 +1,7 @@
-x = int(input('Введите простое число'))
-def primenumb(n):
-    for i in range(2, n):
-        if n % i == 0:
+l = int(input('Введите число'))
+def primenumb(m):
+    for i in range(2, m):
+        if m % i == 0:
             return 0
     return 1
 def search_prime(z):
@@ -17,9 +17,6 @@ def Fib(f1, f2):
         f1 = f2
         f2 = F
         print(f2, '', end='')
-F1 = search_prime(x - 1)
-F2 = search_prime(x)
-Fib(F1, F2)
-
-# В Fib система перезаписи внутри цикла. F - третий член последовательности Фибоначчи, f1 - это второй, а второй - сумма из предыдущих.
-# По сути, сравниваем второй член с новым получившимся
+T1 = search_prime(l - 1)
+T2 = search_prime(l)
+Fib(T1, T2)
