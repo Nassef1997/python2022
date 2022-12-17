@@ -1,22 +1,22 @@
 class Sequence:
   
-  def __init__(self, name, seq):
-    self.name = name
-    self.seq = seq
+  def __init__(self, name1, seq1):
+    self.name1 = name1
+    self.seq1 = seq1
     
-  def name ( self ) :
-    return self.name
+  def name1 ( self ) :
+    return self.name1
   
-  def seq ( self ) :
-    return self.seq
+  def seq1 ( self ) :
+    return self.seq1
   
   def length (self) :
-    length=len(seq)
+    length=len(seq1)
     return length
 
 class DNA(Sequence):
-  name='DNA'
-  alphabet=['A','C','G','T']
+  name1='dna'
+  alphabet1=['A','C','G','T']
 
   def __init__(self,seq,):
     super().__init__(Sequence,seq)
@@ -31,7 +31,7 @@ class DNA(Sequence):
     323.2  * self.seq.count(self.alphabet[1]) +\
     363.2 * self.seq.count(self.alphabet[2]) +\
     320.2 * self.seq.count(self.alphabet[3])
-    print('Молекулярная масса - ',round(m,2))
+    print('Масса молекулярная - ',round(m,2))
 
   def complementary(self):
     comp = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A',}
@@ -39,7 +39,7 @@ class DNA(Sequence):
     for i in self.seq:
       comp_seq += comp[i]
     return comp_seq
-    print('Комплементарная последовательность - ', comp_seq)
+    print('Последовательность - ', comp_seq)
     
   def Transcription(self):
     tran = []
@@ -52,11 +52,11 @@ class DNA(Sequence):
         tran.append('C')
       elif self.seq[i] == 'T':
         tran.append('A')
-      print('Транскрипция - ', tran)
+      print('транскрипции - ', tran)
 
 
 class RNA(Sequence):
-  name = 'RNA'
+  name = 'rna'
   alphabet = ['A', 'C', 'G', 'U']
   def __init__(self,seq,):
     super().__init__(Sequence,seq)
@@ -94,7 +94,7 @@ class RNA(Sequence):
           break
         else:
           protein.append(amin)
-    print('Белковая последовательность  - ', protein)
+    print('Белки  - ', protein)
 
 class Protein(Sequence):
   name = 'Protein'
@@ -120,4 +120,4 @@ class Protein(Sequence):
     105.1 * self.seq.count(self.alphabet[14]) + 181.2 * self.seq.count(self.alphabet[15]) +\
     119.1 * self.seq.count(self.alphabet[16]) + 204.2 * self.seq.count(self.alphabet[17]) +\
     165.2 * self.seq.count(self.alphabet[18]) + 121.2 * self.seq.count(self.alphabet[19])
-    print('Молекулярная масса - ', round(m,2))
+    print('Масса молекулярная - ', round(m,2))
