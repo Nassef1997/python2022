@@ -1,0 +1,4 @@
+
+cd /paith/to/directory
+cat *.fasta > output.fasta
+fold -w 60 output.fasta > final.fasta
